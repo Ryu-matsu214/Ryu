@@ -1,0 +1,128 @@
+x = 0
+
+import math 
+
+from tkinter import *
+
+root1 = Tk()
+
+
+
+
+
+root1.title("Initialization")
+root1.geometry("840x480+300+300")
+
+lbl = Label(root1, text = "Choose the tab you want to use")
+lbl.grid(columnspan = 2, row = 0)
+
+def single1():
+   root2 = Tk()
+   root2.title("simple calculater")
+   root2.geometry("840x480+300+300")
+   x = 0
+   y = 0
+   
+   def single3():
+      blank2 = Entry(root2, width = 20)
+      blank2.place(x = 0, y = 105)
+      lbl2 = Label(root2, text = "input next number")
+      lbl2.place(x = 50, y = 80)
+      def single7():
+         x = int(blank1.get()) + int(blank2.get())
+         lbl3 = Label(root2, text = blank1.get() + " + " + blank2.get() + " = " + str(x), width = 50, font = "Arial 16 bold")
+         lbl3.place(x = 0, y = 135)
+         lbl5 = Label(root2, text = "if you want to do next arithmetic, you have to do the same sequence.", font = "Arial 20 bold", bg = "black", fg = "white")
+         lbl5.place(x = 0, y = 160)
+
+      btn5 = Button(root2, text = " = ", fg = "red", command = single7, width = 7)
+      btn5.place(x = 190,y = 105 )
+
+
+   def single4():
+      blank3 = Entry(root2, width = 20)
+      blank3.place(x = 0, y = 105)
+      lbl2 = Label(root2, text = "input next number")
+      lbl2.place(x = 50, y = 80)
+      def single8():
+         x = int(blank1.get()) - int(blank3.get())
+         lbl3 = Label(root2, text = blank1.get() + " - " + blank3.get() + " = " + str(x), width = 50, font = "Arial 16 bold")
+         lbl3.place(x = 0, y = 135)
+         lbl5 = Label(root2, text = "if you want to do next arithmetic, you have to do the same sequence.", font = "Arial 20 bold", bg = "black", fg = "white")
+         lbl5.place(x = 0, y = 160)
+      btn5 = Button(root2, text = " = ", fg = "red", command = single8, width = 7)
+      btn5.place(x = 190,y = 105 )
+         
+   def single5():
+      blank4 = Entry(root2, width = 20)
+      blank4.place(x = 0, y = 105)
+      lbl2 = Label(root2, text = "input next number")
+      lbl2.place(x = 50, y = 80)
+      def single9():
+         x = int(blank1.get()) * int(blank4.get())
+         lbl3 = Label(root2, text = blank1.get() + " * " + blank4.get() + " = " + str(x), width = 50, font = "Arial 16 bold")
+         lbl3.place(x = 0, y = 135)
+         lbl5 = Label(root2, text = "if you want to do next arithmetic, you have to do the same sequence.", font = "Arial 20 bold", bg = "black", fg = "white")
+         lbl5.place(x = 0, y = 160)
+      btn5 = Button(root2, text = " = ", fg = "red", command = single9, width = 7)
+      btn5.place(x = 190,y = 105 )
+         
+   def single6():
+      blank5 = Entry(root2, width = 20)
+      blank5.place(x = 0, y = 105)
+      lbl2 = Label(root2, text = "input next number")
+      lbl2.place(x = 50, y = 80)
+      def single10():
+         x = int(blank1.get()) / int(blank5.get())
+         lbl3 = Label(root2, text = blank1.get() + " divided by " + blank5.get() + " = " + str(x), width = 50, font = "Arial 16 bold")
+         lbl3.place(x = 0, y = 135)
+         y = int(blank1.get()) % int(blank5.get())
+         lbl4 = Label(root2, text = blank1.get() + " divided by " + blank5.get() + " = " + str(int(x)) + " and over " + str(y), width = 50, font = "Arial 16 bold")
+         lbl4.place(x = 0, y = 160)
+         lbl5 = Label(root2, text = "if you want to do next arithmetic, you have to do the same sequence.", font = "Arial 20 bold", bg = "black", fg = "white")
+         lbl5.place(x = 0, y = 185)
+      btn5 = Button(root2, text = " = ", fg = "red", command = single10, width = 7)
+      btn5.place(x = 190,y = 105 )
+         
+   def single2():
+      btn5 = Button(root2, text = " + ", fg = "red", command = single3, width = 7)
+      btn5.place(x = 0,y = 50 )
+      btn6 = Button(root2, text = " - ", fg = "red", command = single4, width = 7)
+      btn6.place(x = 100, y = 50)
+      btn7 = Button(root2, text = " x ", fg = "red", command = single5, width = 7)
+      btn7.place(x = 200, y = 50)
+      btn8 = Button(root2, text = " / ", fg = "red", command = single6, width = 7)
+      btn8.place(x = 300, y = 50)
+
+   blank1 = Entry(root2, width = 20)
+   blank1.grid(column = 0, row = 1)
+
+   lbl1 = Label(root2, text = "input number")
+   lbl1.grid(column = 0, row = 0)
+   btn4 = Button(root2, text = " decided ", fg = "red", command = single2, width = 20)
+   btn4.grid(column = 1, row = 1)
+   
+def sct():
+   root3 = Tk()
+   root3.title("sin, cos, and tan")
+   root3.geometry("840x480+300+300")
+   
+   
+def dis():
+   root4 = Tk()
+   root4.title("distance")
+   root4.geometry("840x480+300+300")
+   
+btn1 = Button(root1, text = "simple calculator", fg = "red", command = single1, width = 20)
+btn1.grid(column = 0, row = 1)
+
+btn2 = Button(root1, text = "sin, cos, and tan", fg = "red", command = sct, width = 20)
+btn2.grid(column = 1, row = 1)
+
+btn3 = Button(root1, text = "the distance from x to y", fg = "red", command = dis, width = 20)
+btn3.grid(column = 2, row = 1)
+
+
+
+
+   
