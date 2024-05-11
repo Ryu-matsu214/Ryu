@@ -1,0 +1,396 @@
+x = 0
+
+import math 
+
+from tkinter import *
+
+# open window
+root1 = Tk()
+
+
+
+
+
+root1.title("Initialization")
+root1.geometry("840x480+300+300")
+#bg = PhotoImage(file = "school.jpeg")
+#bg_label = Label(root1, image = bg)
+#bg_label.place(x = 400, y = 0)
+
+
+
+
+lbl = Label(root1, text = "Choose the tab you want to use")
+lbl.grid(columnspan = 2, row = 0)
+
+
+def single1():
+   # open window
+   root2 = Tk()
+   root2.title("simple calculater")
+   root2.geometry("840x480+300+300")
+   x = 0
+   y = 0
+   
+      
+   def single3():
+      # get next number
+      blank2 = Entry(root2, width = 20)
+      blank2.place(x = 0, y = 105)
+      blank2.insert(END, 1)
+      lbl2 = Label(root2, text = "input next number")
+      lbl2.place(x = 50, y = 80)
+      
+      
+      def single7():
+         # practical calculation
+         try:    #Not halt program even if you input letters
+            float(blank2.get())
+            x = float(blank1.get()) + float(blank2.get())
+            lbl3 = Label(root2, text = blank1.get() + " + " + blank2.get() + " = " + str(x), width = 50, font = "Arial 16 bold")
+            lbl3.place(x = 0, y = 135)
+            lbl5 = Label(root2, text = "if you want to do next arithmetic, please push reset button", font = "Arial 20 bold", bg = "black", fg = "white")
+            lbl5.place(x = 0, y = 160)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = single1, width = 7)
+            btn6.place(x = 190,y = 185)
+            lbl6 = Label(root2, text = "if you want to return to first page, push x mark in upper left.", font = "Arial 20 bold", bg = "black", fg = "white")
+            lbl6.place(x = 0, y = 210) 
+         except:
+            lbl4 = Label(root2, text = "Error")
+            lbl4.place(x = 50, y = 135)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = single1, width = 7)
+            btn6.place(x = 50,y = 155)
+        
+
+      btn5 = Button(root2, text = " = ", fg = "red", command = single7, width = 7)
+      btn5.place(x = 190,y = 105 )
+
+
+   def single4():
+      # get next number
+      blank3 = Entry(root2, width = 20)
+      blank3.place(x = 0, y = 105)
+      blank3.insert(END, 1)
+      lbl2 = Label(root2, text = "input next number")
+      lbl2.place(x = 50, y = 80)
+      def single8():
+         # practical calculation
+         try:   #Not halt program even if you input letters
+            float(blank2.get())
+            x = float(blank1.get()) - float(blank3.get())
+            lbl3 = Label(root2, text = blank1.get() + " - " + blank3.get() + " = " + str(x), width = 50, font = "Arial 16 bold")
+            lbl3.place(x = 0, y = 135)
+            lbl5 = Label(root2, text = "if you want to do next arithmetic, please push reset button", font = "Arial 20 bold", bg = "black", fg = "white")
+            lbl5.place(x = 0, y = 160)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = single1, width = 7)
+            btn6.place(x = 190,y = 185)
+         except:
+            lbl4 = Label(root2, text = "Error")
+            lbl4.place(x = 50, y = 135)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = single1, width = 7)
+            btn6.place(x = 50,y = 155)
+
+      btn5 = Button(root2, text = " = ", fg = "red", command = single8, width = 7)
+      btn5.place(x = 190,y = 105 )
+         
+   def single5():
+      # get next number
+      blank4 = Entry(root2, width = 20)
+      blank4.place(x = 0, y = 105)
+      blank4.insert(END, 1)
+      lbl2 = Label(root2, text = "input next number")
+      lbl2.place(x = 50, y = 80)
+      def single9():
+         # practical calculation
+         try:   #Not halt program even if you input letters
+            float(blank2.get())
+            x = float(blank1.get()) * float(blank4.get())
+            lbl3 = Label(root2, text = blank1.get() + " X " + blank4.get() + " = " + str(x), width = 50, font = "Arial 16 bold")
+            lbl3.place(x = 0, y = 135)
+            lbl5 = Label(root2, text = "if you want to do next arithmetic, please push reset button", font = "Arial 20 bold", bg = "black", fg = "white")
+            lbl5.place(x = 0, y = 160)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = single1, width = 7)
+            btn6.place(x = 190,y = 185)
+         except:
+            lbl4 = Label(root2, text = "Error")
+            lbl4.place(x = 50, y = 135)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = single1, width = 7)
+            btn6.place(x = 50,y = 155)
+      btn5 = Button(root2, text = " = ", fg = "red", command = single9, width = 7)
+      btn5.place(x = 190,y = 105 )
+         
+   def single6(): # get next number
+      blank5 = Entry(root2, width = 20)
+      blank5.place(x = 0, y = 105)
+      blank5.insert(END, 1)
+      lbl2 = Label(root2, text = "input next number")
+      lbl2.place(x = 50, y = 80)
+      def single10():
+        # practical calculation
+         try:   #Not halt program even if you input letters
+            float(blank2.get())
+            x = float(blank1.get()) / float(blank5.get())
+            lbl3 = Label(root2, text = blank1.get() + " divided by " + blank5.get() + " = " + str(x), width = 50, font = "Arial 16 bold")
+            lbl3.place(x = 0, y = 135)
+            y = int(blank1.get()) % int(blank5.get())
+            lbl4 = Label(root2, text = blank1.get() + " divided by " + blank5.get() + " = " + str(int(x)) + " and over " + str(y), width = 50, font = "Arial 16 bold")
+            lbl4.place(x = 0, y = 160)
+            lbl5 = Label(root2, text = "if you want to do next arithmetic, please push reset button", font = "Arial 20 bold", bg = "black", fg = "white")
+            lbl5.place(x = 0, y = 185)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = single1, width = 7)
+            btn6.place(x = 190,y = 210)
+         except:
+            lbl4 = Label(root2, text = "Error")
+            lbl4.place(x = 50, y = 135)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = single1, width = 7)
+            btn6.place(x = 50,y = 155)
+      btn5 = Button(root2, text = " = ", fg = "red", command = single10, width = 7)
+      btn5.place(x = 190,y = 105 )
+         
+   def single2(): # get first number
+      try:   #Not halt program even if you input letters
+         float(blank1.get())
+         btn5 = Button(root2, text = " + ", fg = "red", command = single3, width = 7)
+         btn5.place(x = 0,y = 50 )
+         btn6 = Button(root2, text = " - ", fg = "red", command = single4, width = 7)
+         btn6.place(x = 100, y = 50)
+         btn7 = Button(root2, text = " x ", fg = "red", command = single5, width = 7)
+         btn7.place(x = 200, y = 50)
+         btn8 = Button(root2, text = " / ", fg = "red", command = single6, width = 7)
+         btn8.place(x = 300, y = 50)
+         
+      except:
+         lbl2 = Label(root2, text = "Error")
+         lbl2.place(x = 50, y = 50)
+         btn6 = Button(root2, text = " reset ", fg = "red", command = single1, width = 7)
+         btn6.place(x = 50,y = 80)
+
+
+   blank1 = Entry(root2, width = 20)
+   blank1.grid(column = 0, row = 1)
+   blank1.insert(END, 1)
+
+   lbl1 = Label(root2, text = "input number")
+   lbl1.grid(column = 0, row = 0)
+   btn4 = Button(root2, text = " decided ", fg = "red", command = single2, width = 20)
+   btn4.grid(column = 1, row = 1)
+   root2.mainloop()
+   
+def sct():   # added process
+   root3 = Tk()
+   root3.title("sin, cos, and tan")
+   root3.geometry("840x480+300+300")
+   x = 0
+   y = 0
+   def sin(): # get number and calculate
+      try:   #Not halt program even if you input letters
+         float(blank1.get())
+         x = math.sin(math.radians(float(blank1.get())))
+         x = "%0.5f" % x
+         lbl2 = Label(root3, text = "The value of sin" + str(blank1.get()) + " is " + x)
+         lbl2.place(x = 0, y = 50)
+         lbl3 = Label(root3, text = "if you want to do next arithmetic, please push reset button", font = "Arial 20 bold", bg = "black", fg = "white")
+         lbl3.place(x = 0, y = 80)
+         btn12 = Button(root3, text = " reset ", fg = "red", command = sct, width = 7)
+         btn12.place(x = 190,y = 125)
+      except:
+            lbl4 = Label(root2, text = "Error")
+            lbl4.place(x = 50, y = 135)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = sct, width = 7)
+            btn6.place(x = 50,y = 155)
+
+   def cos():   # get number and calculate
+      try:   #Not halt program even if you input letters
+         float(blank1.get())
+         x = math.cos(math.radians(float(blank1.get())))
+         x = "%0.5f" % x     
+         lbl2 = Label(root3, text = "The value of cos" + str(blank1.get()) + " is " + x)
+         lbl2.place(x = 0, y = 50)
+         lbl3 = Label(root3, text = "if you want to do next arithmetic, please push reset button", font = "Arial 20 bold", bg = "black", fg = "white")
+         lbl3.place(x = 0, y = 80)
+         btn12 = Button(root3, text = " reset ", fg = "red", command = sct, width = 7)
+         btn12.place(x = 190,y = 100)
+      except:
+            lbl4 = Label(root2, text = "Error")
+            lbl4.place(x = 50, y = 135)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = sct, width = 7)
+            btn6.place(x = 50,y = 155)
+   def tan():   # get number and calculate
+      try:   #Not halt program even if you input letters
+         float(blank1.get())
+         x = math.tan(math.radians(float(blank1.get())))
+         x = "%0.5f" % x      
+         lbl2 = Label(root3, text = "The value of tan" + str(blank1.get()) + " is " + x, width = 20)
+         lbl2.place(x = 0, y = 50)
+         lbl3 = Label(root3, text = "if you want to do next arithmetic, please push reset button", font = "Arial 20 bold", bg = "black", fg = "white")
+         lbl3.place(x = 0, y = 80)
+         btn12 = Button(root3, text = " reset ", fg = "red", command = sct, width = 7)
+         btn12.place(x = 190,y = 100)
+      except:
+            lbl4 = Label(root2, text = "Error")
+            lbl4.place(x = 50, y = 135)
+            btn6 = Button(root2, text = " reset ", fg = "red", command = sct, width = 7)
+            btn6.place(x = 50,y = 155)
+   lbl1 = Label(root3, text = "input degree")
+   lbl1.grid(column = 0, row = 0)
+   blank1 = Entry(root3, width = 20)
+   blank1.grid(column = 0, row = 1) 
+   blank1.insert(END, 1)  
+   btn9 = Button(root3, text ="sin", fg = "red", command = sin, width = 10)
+   btn9.place(x = 200, y = 20)
+   btn10 = Button(root3, text ="cos", fg = "red", command = cos, width = 10)
+   btn10.place(x = 330, y = 20)
+   btn11 = Button(root3, text ="tan", fg = "red", command = tan, width = 10)
+   btn11.place(x = 460, y = 20)
+   #root3.mainloop()
+   
+   
+def dis(): #added process
+   root4 = Tk()
+   root4.title("distance")
+   root4.geometry("840x480+300+300")
+   #root4.mainloop()
+   
+   def two(): # get number
+      root5 = Tk()
+      root5.title("Calculate2")
+      root5.geometry("840x480+300+300")
+      x = 0
+      def n(): # get next nember
+         try:   #Not halt program even if you input letters
+            float(blank1.get())
+            lbl3 = Label(root5, text = "input y number")
+            lbl3.grid(column = 0, row = 2)
+            blank2 = Entry(root5, width = 20)
+            blank2.grid(column = 0, row = 3)
+            blank2.insert(END, 1)
+            #btn11 = Button(root5, text ="deside", command = n1, bg = "white", fg = "red")
+            #btn11.grid(column = 1, row = 3) 
+
+         except:
+            lbl4 = Label(root5, text = "Error")
+            lbl4.grid(column = 0, row = 2)
+            btn6 = Button(root5, text = " reset ", fg = "red", command = two, width = 7)
+            btn6.grid(column = 0, row = 3)
+
+                  
+         def n1(): # practical calculation
+            try:   #Not halt program even if you input letters
+               float(blank2.get())
+               x = (float(blank1.get()) ** 2) + (float(blank2.get()) ** 2)
+               x = x ** .5
+               x = "%0.2f" % x 
+               lbl4 = Label(root5, text = "The distance from x to y is " + x, font = "Arial 32 bold")
+               lbl4.place(x = 100, y = 150)
+               btn6 = Button(root5, text = " reset ", fg = "red", command = dis, width = 7)
+               btn6.place(x = 400,y = 190)
+               
+            except:
+               lbl4 = Label(root5, text = "Error")
+               lbl4.grid(column = 0, row = 4)
+               btn6 = Button(root5, text = " reset ", fg = "red", command = two, width = 7)
+               btn6.grid(column = 0, row = 5)
+
+         
+         btn11 = Button(root5, text ="deside", command = n1, bg = "white", fg = "red")
+         btn11.grid(column = 1, row = 3) 
+             
+      lbl2 = Label(root5, text = "input x number")
+      lbl2.grid(column = 0, row = 0)
+      blank1 = Entry(root5, width = 20)
+      blank1.grid(column = 0, row = 1)
+      blank1.insert(END, 1)
+      btn10 = Button(root5, text ="deside", command = n, bg = "white", fg = "red")
+      btn10.grid(column = 1, row = 1)   
+   def three(): # get number
+      root6 = Tk()
+      root6.title("Calculate3")
+      root6.geometry("840x480+300+300")
+      
+      
+      def m():  # get next nember
+         try:   #Not halt program even if you input letters
+            float(blank1.get())
+            lbl3 = Label(root6, text = "input y number")
+            lbl3.grid(column = 0, row = 2)
+            blank2 = Entry(root6, width = 20)
+            blank2.grid(column = 0, row = 3)
+            blank2.insert(END, 1)
+         except:
+            lbl4 = Label(root5, text = "Error")
+            lbl4.grid(column = 0, row = 2)
+            btn6 = Button(root5, text = " reset ", fg = "red", command = three, width = 7)
+            btn6.grid(column = 0, row = 3)
+                  
+         def m1(): #get next number
+            try:   #Not halt program even if you input letters
+               float(blank2.get())
+               lbl3 = Label(root6, text = "input z number")
+               lbl3.grid(column = 0, row = 4)
+               blank3 = Entry(root6, width = 20)
+               blank3.grid(column = 0, row = 5)
+               blank3.insert(END, 1)
+            except:
+               lbl4 = Label(root5, text = "Error")
+               lbl4.grid(column = 0, row = 4)
+               btn6 = Button(root5, text = " reset ", fg = "red", command = three, width = 7)
+               btn6.grid(column = 0, row = 5)
+
+            
+            def m2(): # practical calculation
+               try:   #Not halt program even if you input letters
+                  float(blank3.get())
+                  x = float(blank1.get()) ** 2 + float(blank2.get()) ** 2
+                  x = x ** .5
+                  x = x ** 2 + float(blank3.get()) ** 2
+                  x = x ** .5
+                  x = "%0.2f" % x
+                  lbl4 = Label(root6, text = "The ditance of three points is " + x, font = "Arial 16 bold")
+                  lbl4.place(x = 125, y = 160)
+                  btn6 = Button(root6, text = " reset ", fg = "red", command = dis, width = 10)
+                  btn6.place(x = 200,y = 185)
+               except:
+                  lbl4 = Label(root5, text = "Error")
+                  lbl4.place(x = 50, y = 160)
+                  btn6 = Button(root5, text = " reset ", fg = "red", command = three, width = 7)
+                  btn6.place(x = 50, row = 180)
+
+               
+               
+            btn12 = Button(root6, text ="deside", command = m2, bg = "white", fg = "red")
+            btn12.grid(column = 1, row = 5)
+         
+         btn11 = Button(root6, text ="deside", command = m1, bg = "white", fg = "red")
+         btn11.grid(column = 1, row = 3) 
+
+      lbl2 = Label(root6, text = "input x number")
+      lbl2.grid(column = 0, row = 0)
+      blank1 = Entry(root6, width = 20)
+      blank1.grid(column = 0, row = 1)
+      blank1.insert(END, 1)
+      btn10 = Button(root6, text ="deside", command = m, bg = "white", fg = "red")
+      btn10.grid(column = 1, row = 1) 
+       
+   
+   lbl1 = Label(root4, text = "Which do you want to calculation?", font = "Arial 16 bold", bg = "black", fg = "white")
+   lbl1.place(x = 200, y = 0)
+   btn9 = Button(root4, text ="two dimensions", command = two, bg = "white", fg = "red")
+   btn9.place(x = 150, y = 30)
+   btn10 = Button(root4, text ="three dimensions", command = three, bg = "white", fg = "red")
+   btn10.place(x = 400, y = 30)
+   
+   
+btn1 = Button(root1, text = "simple calculator", fg = "red", command = single1, width = 20)
+btn1.grid(column = 0, row = 1)
+
+btn2 = Button(root1, text = "sin, cos, and tan", fg = "red", command = sct, width = 20)
+btn2.grid(column = 1, row = 1)
+
+btn3 = Button(root1, text = "the distance from x to y", fg = "red", command = dis, width = 20)
+btn3.grid(column = 2, row = 1)
+
+root1.mainloop()
+
+
+
+   
